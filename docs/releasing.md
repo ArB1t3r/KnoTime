@@ -36,4 +36,4 @@ If publishing fails after draft creation, inspect the draft and upload missing a
 
 ## Current verification boundary
 
-The local universal build and core tests pass. The first public signed release and end-to-end install/relaunch test remain gated on Apple certificate/notarization setup. The pending Program License Agreement has been accepted; the currently signed-in Xcode user is an Admin and cannot create the required local Developer ID certificate. An Account Holder must create it or provide an existing certificate with its private key. The prior performance comparison predates Sparkle and must be repeated before claiming current-release memory numbers.
+The local universal build and core tests pass. A Developer ID Application certificate has now been created and paired with its Keychain private key. The app and all Sparkle helpers have been signed with hardened runtime and secure timestamps; deep signature verification passes. Apple notarization and the end-to-end update/relaunch test remain pending a configured notarytool authentication profile. No stable installer has been published yet.
