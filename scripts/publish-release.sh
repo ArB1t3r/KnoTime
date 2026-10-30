@@ -30,7 +30,12 @@ xcrun stapler validate "$OUT/KnoTime.dmg"
 # Feed uses a zip of the stapled app. Keep the DMG outside the feed directory.
 mkdir -p "$OUT/update"
 ./scripts/prepare-release.sh "$OUT/update"
-shasum -a 256 "$OUT/KnoTime.dmg" "$OUT/update/KnoTime-$VERSION.zip" | sed "s|$OUT/||g" > "$OUT/SHA256SUMS"
+python3 - "$OUT" "$VERSION" <<'PYHASH'
+import hashlib, pathlib, sys
+root=pathlib.Path(sys.argv[1])
+files=[root/'KnoTime.dmg', root/'update'/f'KnoTime-{sys.argv[2]}.zip']
+(root/'SHA256SUMS').write_text(''.join(f'{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.name}\n' for p in files))
+PYHASH
 # All assets upload while draft; only then does /latest advance.
 gh release create "v$VERSION" --repo "$REPO" --draft --title "KnoTime $VERSION" --notes-file "$NOTES" \
     "$OUT/KnoTime.dmg" "$OUT/update/KnoTime-$VERSION.zip" "$OUT/update/appcast.xml" "$OUT/SHA256SUMS"

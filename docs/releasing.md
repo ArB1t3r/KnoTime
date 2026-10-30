@@ -18,7 +18,7 @@ The updater reads `https://github.com/ArB1t3r/KnoTime/releases/latest/download/a
 
 1. Update both `CFBundleShortVersionString` and monotonically increasing `CFBundleVersion` in `Resources/Info.plist`. Update CHANGELOG and release notes. Never overwrite a published version's assets.
 2. Run `KNOTIME_UNIVERSAL=1 ./build.sh --test`. Verify architecture with `lipo -archs dist/KnoTime.app/Contents/MacOS/KnoTime`.
-3. Set non-secret variables `KNOTIME_SIGN_IDENTITY='Developer ID Application: … (TEAMID)'` and `KNOTIME_NOTARY_PROFILE=KnoTime-notary`.
+3. Export non-secret environment variables `KNOTIME_SIGN_IDENTITY='Developer ID Application: … (TEAMID)'` and `KNOTIME_NOTARY_PROFILE=KnoTime-notary`.
 4. Run `./scripts/notarize.sh`. It signs Sparkle helpers inside-out, enables hardened runtime, submits to Apple, checks acceptance, staples, and evaluates Gatekeeper.
 5. Run `./scripts/publish-release.sh path/to/release-notes.md`. It refuses unstapled/non-Developer-ID apps, makes and notarizes a DMG, signs the update ZIP with Sparkle, creates a draft release, uploads all files, then publishes it. This command publishes publicly; inspect everything first.
 6. Fetch `/releases/latest/download/appcast.xml` anonymously and confirm version, HTTPS URLs, byte length and signature. Test a copied previous version upgrading, relaunching, preserving cities/schedules and checking again with no update available. A changed or truncated archive must fail signature validation.

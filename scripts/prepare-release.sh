@@ -11,6 +11,12 @@ DEST="${1:?Usage: scripts/prepare-release.sh OUTPUT_DIRECTORY}"
 mkdir -p "$DEST"
 DEST=$(cd "$DEST" && pwd)
 codesign --verify --deep --strict "$APP"
+EXPECTED_KEY=$(/usr/libexec/PlistBuddy -c 'Print SUPublicEDKey' "$APP/Contents/Info.plist")
+ACTUAL_KEY=$("$BIN/generate_keys" --account app.knotime.mac -p)
+if [ "$EXPECTED_KEY" != "$ACTUAL_KEY" ]; then
+    echo 'Signing key does not match the public key embedded in the app.' >&2
+    exit 1
+fi
 # ditto preserves framework symlinks and executable permissions.
 ditto -c -k --sequesterRsrc --keepParent "$APP" "$DEST/KnoTime-$VERSION.zip"
 "$BIN/generate_appcast" --account app.knotime.mac --maximum-deltas 0 \

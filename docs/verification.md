@@ -43,3 +43,7 @@ This is a brief smoke measurement, not a controlled energy benchmark. Summing RS
 - Signed ZIP/appcast generation succeeded using the private key stored in Keychain account app.knotime.mac; no private key is exported.
 - Public release scripts require Developer ID signing, Apple acceptance, stapling and Gatekeeper checks before publishing.
 - At this stage Xcode reports a pending Program License Agreement and cannot issue a Developer ID identity. Public signed distribution and end-to-end update/relaunch remain pending that account prerequisite.
+
+- GitHub Actions build/test/signature validation passed: https://github.com/ArB1t3r/KnoTime/actions/runs/41047176069 .
+- Native UI inspection confirmed Automatic Updates and Check for Updates entries in the matching settings layout. With no public stable release yet, a manual check reports a retrieval error; this is not counted as a successful end-to-end update test.
+- The generated archive's Ed25519 signature was independently checked using CryptoKit and the embedded public key. Flipping one byte in a copy caused verification to fail as expected.
