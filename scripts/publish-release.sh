@@ -12,7 +12,8 @@ REPO="${KNOTIME_RELEASE_REPO:-ArB1t3r/KnoTime}"
 STAGE="$PWD/.build/release-stage/$VERSION"
 OUT="$PWD/release/$VERSION"
 # Never publish an ad-hoc or unstapled build by accident.
-codesign --display --verbose=4 "$APP" 2>&1 | grep -q '^Authority=Developer ID Application:'
+SIGNATURE_INFO=$(codesign --display --verbose=4 "$APP" 2>&1)
+grep -q '^Authority=Developer ID Application:' <<< "$SIGNATURE_INFO"
 codesign --verify --deep --strict "$APP"
 xcrun stapler validate "$APP"
 spctl --assess --type execute "$APP"
