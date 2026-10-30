@@ -49,11 +49,16 @@ A short local comparison, with both panels hidden:
 
 [**Download KnoTime for macOS**](https://github.com/ArB1t3r/KnoTime/releases/latest/download/KnoTime.dmg)
 
-Open the DMG, drag KnoTime into Applications, then launch it. Look for the orbit-clock icon in the menu bar. No Terminal commands or security bypasses are needed. You may see macOS's normal first-launch confirmation for an app downloaded from the internet.
+1. Open **KnoTime.dmg**.
+2. Drag **KnoTime** into **Applications**.
+3. Launch KnoTime from Applications and click the orbit-clock icon in the menu bar.
+
+Ready to use — no developer account, signing setup, or Terminal commands required. If macOS asks to confirm the first launch, click **Open**.
 
 Requires **macOS 14 or later**. Release builds target Apple Silicon and Intel; interactive QA is currently performed on Apple Silicon. Existing 1.0 builds need a one-time manual upgrade to gain the updater.
 
-## Build
+<details>
+<summary>For developers: build from source</summary>
 
 Install Xcode with Swift 6 or later, then:
 
@@ -64,9 +69,11 @@ cd KnoTime
 open dist/KnoTime.app
 ```
 
-The first build downloads the pinned Sparkle dependency. Local builds are ad-hoc signed. For a universal binary, run `KNOTIME_UNIVERSAL=1 ./build.sh`. SwiftPM's native build engine is used for the verified local environment; it is deprecated in Swift 6.4.
+The first build downloads the pinned Sparkle dependency. For a universal binary, run `KNOTIME_UNIVERSAL=1 ./build.sh`.
 
 See [release and signing instructions](docs/releasing.md), [architecture](docs/architecture.md), and [verification](docs/verification.md).
+
+</details>
 
 ## Contribute
 

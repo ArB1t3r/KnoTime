@@ -49,11 +49,16 @@
 
 [**下载 macOS 安装包**](https://github.com/ArB1t3r/KnoTime/releases/latest/download/KnoTime.dmg)
 
-打开 DMG，把 KnoTime 拖入 Applications，然后启动。图标会出现在菜单栏，无需终端命令或绕过安全检查。macOS 可能显示正常的“从互联网下载的应用”首次打开确认。
+1. 打开 **KnoTime.dmg**。
+2. 把 **KnoTime** 拖入 **Applications（应用程序）**。
+3. 从应用程序启动 KnoTime，点击菜单栏中的时钟图标即可使用。
+
+无需开发者账号、配置签名或执行终端命令。如果 macOS 首次启动时询问是否打开，点击 **打开** 即可。
 
 要求 macOS 14 或更新版本。发布构建面向 Apple Silicon 和 Intel；目前交互测试在 Apple Silicon 完成。之前的 1.0 版本需要手动安装一次新版，之后即可使用内置更新。
 
-## 开发
+<details>
+<summary>开发者：从源码构建</summary>
 
 安装 Xcode 与 Swift 6 或更新版本：
 
@@ -64,9 +69,11 @@ cd KnoTime
 open dist/KnoTime.app
 ```
 
-首次构建会下载锁定版本的 Sparkle。本地构建使用临时签名。通用架构构建：`KNOTIME_UNIVERSAL=1 ./build.sh`。
+首次构建会下载锁定版本的 Sparkle。通用架构构建：`KNOTIME_UNIVERSAL=1 ./build.sh`。
 
 [使用说明](docs/usage.md) · [发布与签名](docs/releasing.md) · [架构](docs/architecture.md) · [贡献指南](CONTRIBUTING.md)
+
+</details>
 
 ## 致谢与许可
 

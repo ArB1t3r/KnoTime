@@ -1,6 +1,6 @@
 # Using KnoTime
 
-Open `dist/KnoTime.app`, or drag the app from `KnoTime.dmg` into Applications. Click the clock/city in the menu bar. Clicking outside dismisses the panel; reopening the app in Finder also opens the panel.
+Open `KnoTime.dmg`, drag KnoTime into Applications, then launch it from Applications. Click the clock/city in the menu bar. Clicking outside dismisses the panel; reopening the app in Finder also opens the panel.
 
 - Drag the timeline, or scroll over it, to compare times. Release the drag to snap back to now. A wheel gesture snaps back shortly after the gesture stops.
 - Previous/next-day labels are relative to your computer's calendar date at the selected instant, and sit below a fixed-position time capsule.
