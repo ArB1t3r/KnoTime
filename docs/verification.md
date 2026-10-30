@@ -42,7 +42,7 @@ This is a brief smoke measurement, not a controlled energy benchmark. Summing RS
 - Update configuration uses HTTPS, a dedicated Ed25519 public key, 24-hour checking, profiling disabled and verification before archive extraction. Installation is not silent.
 - Signed ZIP/appcast generation succeeded using the private key stored in Keychain account app.knotime.mac; no private key is exported.
 - Public release scripts require Developer ID signing, Apple acceptance, stapling and Gatekeeper checks before publishing.
-- At this stage Xcode reports a pending Program License Agreement and cannot issue a Developer ID identity. Public signed distribution and end-to-end update/relaunch remain pending that account prerequisite.
+- The Program License Agreement has now been accepted and Xcode can load the team. The current Xcode user has the Admin role; local Developer ID certificate creation requires the Account Holder. A valid Apple Development identity is present, but no Developer ID Application identity is available. Public signed distribution and end-to-end update/relaunch remain pending certificate and notarization setup.
 
 - GitHub Actions build/test/signature validation passed: https://github.com/ArB1t3r/KnoTime/actions/runs/41047176069 .
 - Native UI inspection confirmed Automatic Updates and Check for Updates entries in the matching settings layout. With no public stable release yet, a manual check reports a retrieval error; this is not counted as a successful end-to-end update test.

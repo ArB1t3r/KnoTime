@@ -9,7 +9,7 @@ The updater reads `https://github.com/ArB1t3r/KnoTime/releases/latest/download/a
 ## One-time maintainer setup
 
 1. Accept any pending Apple Developer Program agreement as the Account Holder. Xcode cannot issue certificates while this is pending.
-2. Xcode → Settings → Apple Accounts → your team → Manage Certificates → Developer ID Application. Keep the private key in Keychain. This requires the appropriate paid developer-team permissions.
+2. Xcode → Settings → Apple Accounts → your team → Manage Certificates → Developer ID Application. Keep the private key in Keychain. Apple requires the Account Holder role to create local Developer ID certificates; an Admin role alone is insufficient. Cloud-managed Developer ID access is a separate distribution route. See [Apple’s role requirement](https://developer.apple.com/help/account/certificates/create-developer-id-certificates/).
 3. Configure `xcrun notarytool store-credentials KnoTime-notary` interactively using your Apple account/team and an app-specific password, or an App Store Connect API key. Do not paste secrets into issues, chat, scripts or shell history. The saved profile belongs in the login Keychain.
 4. Sparkle's Ed25519 signing key uses Keychain account `app.knotime.mac`. The repository contains only its public key. On the original release machine this key has already been generated. Back it up securely outside the repository; never regenerate it as routine release preparation.
 5. Other contributors building forks must use their own feed and signing public key. They cannot publish compatible official updates without the release key.
@@ -36,4 +36,4 @@ If publishing fails after draft creation, inspect the draft and upload missing a
 
 ## Current verification boundary
 
-The local universal build and core tests pass. The first public signed release and end-to-end install/relaunch test remain gated on Apple account/certificate/notarization setup. The prior performance comparison predates Sparkle and must be repeated before claiming current-release memory numbers.
+The local universal build and core tests pass. The first public signed release and end-to-end install/relaunch test remain gated on Apple certificate/notarization setup. The pending Program License Agreement has been accepted; the currently signed-in Xcode user is an Admin and cannot create the required local Developer ID certificate. An Account Holder must create it or provide an existing certificate with its private key. The prior performance comparison predates Sparkle and must be repeated before claiming current-release memory numbers.
