@@ -1,0 +1,20 @@
+name: Build and test
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  macos:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Toolchain
+        run: swift --version
+      - name: Build and test
+        run: ./build.sh --test
+      - name: Validate metadata and signatures
+        run: |
+          plutil -lint dist/KnoTime.app/Contents/Info.plist
+          codesign --verify --deep --strict dist/KnoTime.app

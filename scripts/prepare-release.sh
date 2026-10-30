@@ -1,0 +1,30 @@
+#!/bin/bash
+# Produces signed update artifacts locally; does not publish or export keys.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+APP="$PWD/dist/KnoTime.app"
+BIN="$PWD/.build/artifacts/sparkle/Sparkle/bin"
+VERSION=$(/usr/libexec/PlistBuddy -c 'Print CFBundleShortVersionString' "$APP/Contents/Info.plist")
+BUILD=$(/usr/libexec/PlistBuddy -c 'Print CFBundleVersion' "$APP/Contents/Info.plist")
+REPO="${KNOTIME_RELEASE_REPO:-ArB1t3r/KnoTime}"
+DEST="${1:?Usage: scripts/prepare-release.sh OUTPUT_DIRECTORY}"
+mkdir -p "$DEST"
+DEST=$(cd "$DEST" && pwd)
+codesign --verify --deep --strict "$APP"
+# ditto preserves framework symlinks and executable permissions.
+ditto -c -k --sequesterRsrc --keepParent "$APP" "$DEST/KnoTime-$VERSION.zip"
+"$BIN/generate_appcast" --account app.knotime.mac --maximum-deltas 0 \
+    --download-url-prefix "https://github.com/$REPO/releases/download/v$VERSION/" "$DEST"
+python3 - "$DEST/appcast.xml" "$BUILD" <<'PY'
+import sys, xml.etree.ElementTree as ET
+root=ET.parse(sys.argv[1]).getroot()
+ns='{http://www.andymatuschak.org/xml-namespaces/sparkle}'
+items=root.findall('./channel/item')
+assert any(i.findtext(ns+'version') == sys.argv[2] for i in items), 'Missing current build'
+for i in items:
+    e=i.find('enclosure')
+    assert e is not None and e.get(ns+'edSignature') and int(e.get('length','0')) > 0
+    assert e.get('url','').startswith('https://')
+print('Signed appcast validated')
+PY
+printf 'Prepared release %s (build %s) at %s\n' "$VERSION" "$BUILD" "$DEST"

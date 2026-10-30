@@ -1,0 +1,267 @@
+{
+  "method": "Six ps RSS/CPU samples at two-second intervals, both panels hidden. Summed RSS is not unique physical footprint; ps CPU is a recent average, not a controlled energy benchmark.",
+  "summary": {
+    "KnoTime": {
+      "process_count": 1,
+      "mean_summed_rss_mib": 120.9,
+      "mean_cpu_percent": 0.0,
+      "last": [
+        {
+          "pid": 21786,
+          "rss_kib": 123760,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:03.89"
+        }
+      ]
+    },
+    "Hovrly": {
+      "process_count": 4,
+      "mean_summed_rss_mib": 390.7,
+      "mean_cpu_percent": 0.0,
+      "last": [
+        {
+          "pid": 1288,
+          "rss_kib": 192528,
+          "cpu_percent": 0.0,
+          "cpu_time": "2:57.67"
+        },
+        {
+          "pid": 1548,
+          "rss_kib": 67808,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:10.89"
+        },
+        {
+          "pid": 1574,
+          "rss_kib": 32880,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:04.67"
+        },
+        {
+          "pid": 1576,
+          "rss_kib": 106848,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:14.38"
+        }
+      ]
+    }
+  },
+  "samples": [
+    {
+      "KnoTime": [
+        {
+          "pid": 21786,
+          "rss_kib": 123760,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:03.89"
+        }
+      ],
+      "Hovrly": [
+        {
+          "pid": 1288,
+          "rss_kib": 192544,
+          "cpu_percent": 0.0,
+          "cpu_time": "2:57.67"
+        },
+        {
+          "pid": 1548,
+          "rss_kib": 67808,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:10.89"
+        },
+        {
+          "pid": 1574,
+          "rss_kib": 32880,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:04.67"
+        },
+        {
+          "pid": 1576,
+          "rss_kib": 106848,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:14.38"
+        }
+      ]
+    },
+    {
+      "KnoTime": [
+        {
+          "pid": 21786,
+          "rss_kib": 123760,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:03.89"
+        }
+      ],
+      "Hovrly": [
+        {
+          "pid": 1288,
+          "rss_kib": 192544,
+          "cpu_percent": 0.0,
+          "cpu_time": "2:57.67"
+        },
+        {
+          "pid": 1548,
+          "rss_kib": 67808,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:10.89"
+        },
+        {
+          "pid": 1574,
+          "rss_kib": 32880,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:04.67"
+        },
+        {
+          "pid": 1576,
+          "rss_kib": 106848,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:14.38"
+        }
+      ]
+    },
+    {
+      "KnoTime": [
+        {
+          "pid": 21786,
+          "rss_kib": 123760,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:03.89"
+        }
+      ],
+      "Hovrly": [
+        {
+          "pid": 1288,
+          "rss_kib": 192544,
+          "cpu_percent": 0.0,
+          "cpu_time": "2:57.67"
+        },
+        {
+          "pid": 1548,
+          "rss_kib": 67808,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:10.89"
+        },
+        {
+          "pid": 1574,
+          "rss_kib": 32880,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:04.67"
+        },
+        {
+          "pid": 1576,
+          "rss_kib": 106848,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:14.38"
+        }
+      ]
+    },
+    {
+      "KnoTime": [
+        {
+          "pid": 21786,
+          "rss_kib": 123760,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:03.89"
+        }
+      ],
+      "Hovrly": [
+        {
+          "pid": 1288,
+          "rss_kib": 192544,
+          "cpu_percent": 0.0,
+          "cpu_time": "2:57.67"
+        },
+        {
+          "pid": 1548,
+          "rss_kib": 67808,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:10.89"
+        },
+        {
+          "pid": 1574,
+          "rss_kib": 32880,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:04.67"
+        },
+        {
+          "pid": 1576,
+          "rss_kib": 106848,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:14.38"
+        }
+      ]
+    },
+    {
+      "KnoTime": [
+        {
+          "pid": 21786,
+          "rss_kib": 123760,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:03.89"
+        }
+      ],
+      "Hovrly": [
+        {
+          "pid": 1288,
+          "rss_kib": 192528,
+          "cpu_percent": 0.0,
+          "cpu_time": "2:57.67"
+        },
+        {
+          "pid": 1548,
+          "rss_kib": 67808,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:10.89"
+        },
+        {
+          "pid": 1574,
+          "rss_kib": 32880,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:04.67"
+        },
+        {
+          "pid": 1576,
+          "rss_kib": 106848,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:14.38"
+        }
+      ]
+    },
+    {
+      "KnoTime": [
+        {
+          "pid": 21786,
+          "rss_kib": 123760,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:03.89"
+        }
+      ],
+      "Hovrly": [
+        {
+          "pid": 1288,
+          "rss_kib": 192528,
+          "cpu_percent": 0.0,
+          "cpu_time": "2:57.67"
+        },
+        {
+          "pid": 1548,
+          "rss_kib": 67808,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:10.89"
+        },
+        {
+          "pid": 1574,
+          "rss_kib": 32880,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:04.67"
+        },
+        {
+          "pid": 1576,
+          "rss_kib": 106848,
+          "cpu_percent": 0.0,
+          "cpu_time": "0:14.38"
+        }
+      ]
+    }
+  ]
+}
