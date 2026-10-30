@@ -36,4 +36,4 @@ If publishing fails after draft creation, inspect the draft and upload missing a
 
 ## Current verification boundary
 
-The local universal build and core tests pass. A Developer ID Application certificate has now been created and paired with its Keychain private key. The app and all Sparkle helpers have been signed with hardened runtime and secure timestamps; deep signature verification passes. Apple notarization and the end-to-end update/relaunch test remain pending a configured notarytool authentication profile. No stable installer has been published yet.
+Version 1.1.0 is published. The universal application and DMG both received Apple notarization acceptance, were stapled, and passed validation. Gatekeeper accepts the application as Notarized Developer ID. The public GitHub appcast is accessible without authentication. A separate signed 1.0.9 test copy discovered, downloaded, installed and automatically relaunched as 1.1.0; user preferences were preserved. A subsequent check reports the latest version. Intel hardware execution and a fresh-user-account installation remain untested.

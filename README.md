@@ -4,9 +4,9 @@
 ### Find time that works for everyone.
 A native macOS menu-bar world clock with shared working hours.
 
-[简体中文](README.zh-CN.md) · [Releases](https://github.com/ArB1t3r/KnoTime/releases) · [User guide](docs/usage.md) · [Contributing](CONTRIBUTING.md)
+[Download for macOS](https://github.com/ArB1t3r/KnoTime/releases/latest/download/KnoTime.dmg) · [简体中文](README.zh-CN.md) · [Releases](https://github.com/ArB1t3r/KnoTime/releases) · [User guide](docs/usage.md) · [Contributing](CONTRIBUTING.md)
 
-![KnoTime orbit-clock identity](docs/assets/orbit-clock.png)
+<img src="docs/assets/main-panel.png" width="325" alt="KnoTime running on macOS: city clocks and working-hour timeline" />
 
 **Inspired by [Hovrly](https://hovrly.com/). Built independently with SwiftUI and AppKit.**
 
@@ -24,6 +24,13 @@ Keep your cities in the menu bar. Scrub the timeline to compare local times, the
 - **Clocks work offline.** No account or analytics. City search and time calculations stay on your Mac. Optional daily update checks contact GitHub.
 - **Built-in updates.** Sparkle checks for signed updates, with manual checking and an automatic-check toggle. Installation asks for confirmation.
 
+<details>
+<summary>Settings and built-in updates</summary>
+
+<img src="docs/assets/settings.png" width="325" alt="KnoTime settings with automatic updates and manual update checking" />
+
+</details>
+
 ## Measured footprint
 
 A short local comparison, with both panels hidden:
@@ -38,9 +45,11 @@ A short local comparison, with both panels hidden:
 
 ## Install
 
-**Release status:** the first Developer ID–signed, Apple-notarized installer is being prepared. Until a signed release is published, this repository is available for building locally; no unsigned installer is presented as ready for general distribution.
+**KnoTime 1.1.0 is available, Developer ID–signed and Apple-notarized.**
 
-Once available, download `KnoTime.dmg` from [Releases](https://github.com/ArB1t3r/KnoTime/releases), open it, and drag KnoTime into Applications. Launch it and look for the orbit-clock icon in the menu bar. No Terminal commands should be required for the notarized release.
+[**Download KnoTime for macOS**](https://github.com/ArB1t3r/KnoTime/releases/latest/download/KnoTime.dmg)
+
+Open the DMG, drag KnoTime into Applications, then launch it. Look for the orbit-clock icon in the menu bar. No Terminal commands or security bypasses are needed. You may see macOS's normal first-launch confirmation for an app downloaded from the internet.
 
 Requires **macOS 14 or later**. Release builds target Apple Silicon and Intel; interactive QA is currently performed on Apple Silicon. Existing 1.0 builds need a one-time manual upgrade to gain the updater.
 

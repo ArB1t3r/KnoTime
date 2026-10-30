@@ -1,7 +1,8 @@
 # Changelog
 
-## 1.1.0 — release preparation
+## 1.1.0 — 2026-10-30
 
+- Developer ID–signed and Apple-notarized universal app and DMG.
 - Sparkle automatic update checks, manual checking and per-user opt-out.
 - GitHub-hosted, Ed25519-signed updates and release tooling.
 - Universal Apple Silicon / Intel build option.

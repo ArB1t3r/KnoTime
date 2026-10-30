@@ -4,9 +4,9 @@
 ### 找到大家都有空的那段时间。
 原生 macOS 菜单栏世界时钟，支持工作时间交集。
 
-[English](README.md) · [下载与发布](https://github.com/ArB1t3r/KnoTime/releases) · [参与贡献](CONTRIBUTING.md)
+[下载 macOS 安装包](https://github.com/ArB1t3r/KnoTime/releases/latest/download/KnoTime.dmg) · [English](README.md) · [下载与发布](https://github.com/ArB1t3r/KnoTime/releases) · [参与贡献](CONTRIBUTING.md)
 
-![KnoTime 轨道时钟图标](docs/assets/orbit-clock.png)
+<img src="docs/assets/main-panel.png" width="325" alt="KnoTime macOS 实际运行截图：城市时钟与工作时间轴" />
 
 **Inspired by [Hovrly](https://hovrly.com/)。使用 SwiftUI 与 AppKit 独立实现。**
 
@@ -24,6 +24,13 @@
 - **离线时钟**：无需账号、不含分析追踪。城市搜索、时区和日照计算均在本地完成；可选的更新检查会连接 GitHub。
 - **自动更新**：通过 Sparkle 检查签名更新包；支持手动检查和关闭自动检查，安装前征求用户确认。
 
+<details>
+<summary>查看设置与自动更新界面</summary>
+
+<img src="docs/assets/settings.png" width="325" alt="KnoTime 实际设置界面：自动更新开关和手动检查入口" />
+
+</details>
+
 ## 已测出的轻量化优势
 
 在两个应用面板均收起的短时采样中：
@@ -38,9 +45,11 @@
 
 ## 安装
 
-**当前状态：正在准备首个 Developer ID 签名、Apple 公证的正式安装包。** 签名版本发布前，可下载源码本地构建；不会把未公证的包标为普通用户可直接安装的正式版本。
+**KnoTime 1.1.0 已正式发布，完成 Developer ID 签名与 Apple 公证。**
 
-正式发布后：从 [Releases](https://github.com/ArB1t3r/KnoTime/releases) 下载 `KnoTime.dmg`，打开后把应用拖入 Applications，再启动。图标出现在菜单栏，无需终端命令。
+[**下载 macOS 安装包**](https://github.com/ArB1t3r/KnoTime/releases/latest/download/KnoTime.dmg)
+
+打开 DMG，把 KnoTime 拖入 Applications，然后启动。图标会出现在菜单栏，无需终端命令或绕过安全检查。macOS 可能显示正常的“从互联网下载的应用”首次打开确认。
 
 要求 macOS 14 或更新版本。发布构建面向 Apple Silicon 和 Intel；目前交互测试在 Apple Silicon 完成。之前的 1.0 版本需要手动安装一次新版，之后即可使用内置更新。
 

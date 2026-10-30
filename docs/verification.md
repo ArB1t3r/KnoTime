@@ -47,3 +47,13 @@ This is a brief smoke measurement, not a controlled energy benchmark. Summing RS
 - GitHub Actions build/test/signature validation passed: https://github.com/ArB1t3r/KnoTime/actions/runs/41047176069 .
 - Native UI inspection confirmed Automatic Updates and Check for Updates entries in the matching settings layout. With no public stable release yet, a manual check reports a retrieval error; this is not counted as a successful end-to-end update test.
 - The generated archive's Ed25519 signature was independently checked using CryptoKit and the embedded public key. Flipping one byte in a copy caused verification to fail as expected.
+
+## Published 1.1.0 verification
+
+- Application notarization: Accepted, submission `44ebb200-7774-4c0e-a448-c28dd6d97c99`. DMG notarization: Accepted, submission `c03b0c0e-2152-4f43-ba33-054a6c355e7c`. Both stapled and validated.
+- Universal arm64/x86_64 app is Developer ID signed, hardened runtime enabled, secure timestamp present. Gatekeeper returns `accepted`, `source=Notarized Developer ID`.
+- Stable release: https://github.com/ArB1t3r/KnoTime/releases/tag/v1.1.0 . Public appcast retrieved anonymously and byte-matched to the generated signed-archive feed.
+- End-to-end update on an isolated, locally signed 1.0.9 test copy: detected 1.1.0, downloaded, verified, installed, automatically relaunched. After allowing the updater to finish without UI-tool reactivation, the new running process and UI both showed 1.1.0. A second manual check reported up-to-date.
+- `preferences.v1` matched before/after byte-for-byte (cities, working hours and display settings).
+- Browser-downloaded DMG SHA-256: `df2a20f8385481d3524823f0c0fe29e9502a99ef8b21626cc7c313c3155585b9`.
+- Original pre-release caveats above are historical; notarization and automatic upgrade/relaunch are now verified. A clean-user-account test, Intel execution and a full logout/login cycle remain outside this session's verification.
