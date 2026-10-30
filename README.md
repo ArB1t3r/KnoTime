@@ -6,7 +6,9 @@ A native macOS menu-bar world clock with shared working hours.
 
 [Download for macOS](https://github.com/ArB1t3r/KnoTime/releases/latest/download/KnoTime.dmg) · [简体中文](README.zh-CN.md) · [Releases](https://github.com/ArB1t3r/KnoTime/releases) · [User guide](docs/usage.md) · [Contributing](CONTRIBUTING.md)
 
-<img src="docs/assets/main-panel.png" width="325" alt="KnoTime running on macOS: city clocks and working-hour timeline" />
+<img src="docs/assets/menubar-mockup.png" width="800" alt="KnoTime product mockup: menu-bar icon and open panel showing New York, London, Cape Town, Dubai, Tokyo, and Sydney" />
+
+<sub>Product mockup · Six cities, one shared timeline.</sub>
 
 **Inspired by [Hovrly](https://hovrly.com/). Built independently with SwiftUI and AppKit.**
 

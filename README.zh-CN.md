@@ -6,7 +6,9 @@
 
 [下载 macOS 安装包](https://github.com/ArB1t3r/KnoTime/releases/latest/download/KnoTime.dmg) · [English](README.md) · [下载与发布](https://github.com/ArB1t3r/KnoTime/releases) · [参与贡献](CONTRIBUTING.md)
 
-<img src="docs/assets/main-panel.png" width="325" alt="KnoTime macOS 实际运行截图：城市时钟与工作时间轴" />
+<img src="docs/assets/menubar-mockup.png" width="800" alt="KnoTime 产品示意图：菜单栏图标与展开面板，展示纽约、伦敦、开普敦、迪拜、东京和悉尼" />
+
+<sub>产品示意图 · 六座城市，同一条时间轴。</sub>
 
 **Inspired by [Hovrly](https://hovrly.com/)。使用 SwiftUI 与 AppKit 独立实现。**
 
